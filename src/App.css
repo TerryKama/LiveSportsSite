@@ -38,3 +38,48 @@ header{
     color: #666;
     font-size: 0.9em;
 }
+
+.refresh-controls{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+button{
+    padding: 8px 16px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:disabled{
+    background: #cccccc;
+    cursor: not-allowed;
+}
+button.refreshing{
+    background: #fbbc05;
+}
+.icon{
+    margin-right: 5px;
+}
+.error{
+    background: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+.error.warning{
+    background: #fff3cd;
+    color: #856404;
+}
+.error.critical{
+    background: #f8d7da;
+    color: #721c24;
+}
+.error button{
+    margin-left: 10px;
+    padding: 4px 8px;
+    background: transparent;
+    border: 1px solid currentColor;
+}
