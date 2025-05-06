@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000"/>
+    <meta
+        name="description"
+        content="Live sports updates with real-time scores and statistics"/>
+    <title>Live Sports Updates ⚽🏀</title>
+
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+    <link rel="preconnect" href="https://v3.football.api-sports.io" crossorigin>
+
+    <style>
+        body{
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #f8f9fa;
+        }
+        #root{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .app-loading{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <noscript>
+        <div class="noscript-warning">
+            <h1>JavaScript Required</h1>
+            <p>This application requires JavaScript to function properly. Please enable it in your browser settings.</p>
+        </div>
+    </noscript>
+    <div id="root" class="app-loading">
+        <div style="
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            ">
+            <div style="
+                width: 50px;
+                height: 50px;
+                border: 5px solid #f3f3f3;
+                border-top: 5px solid #3498db;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                "></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            var root = document.getElementById('root');
+            if (root) {
+                root.classList.remove('app-loading')
+            }
+        });
+    </script>
+</body>
+</html>
